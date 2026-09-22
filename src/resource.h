@@ -1,0 +1,14 @@
+#pragma once
+
+#define IDD_PREFERENCES 101
+
+#define IDC_EMPTY_SHOW 1001
+#define IDC_EMPTY_HIDE 1002
+#define IDC_EMPTY_LABEL 1003
+#define IDC_EMPTY_SHOW_NOTE 1004
+#define IDC_EMPTY_HIDE_NOTE 1005
+#define IDC_PROPORTIONAL 1006
+
+#ifndef IDC_STATIC
+#define IDC_STATIC (-1)
+#endif

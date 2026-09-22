@@ -1,0 +1,35 @@
+# Build output
+build/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[Rr]elease-Static/
+Win32/
+x64/
+ARM64/
+ARM64EC/
+
+*.obj
+*.pch
+*.idb
+*.ilk
+*.exp
+*.pdb
+*.dll
+*.lib
+*.log
+*.tlog
+*.recipe
+*.lastbuildstate
+
+# Prebuilt libraries shipped with the foobar2000 SDK
+!sdk/foobar2000/shared/shared-*.lib
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.aps
+*.VC.db
+*.VC.opendb

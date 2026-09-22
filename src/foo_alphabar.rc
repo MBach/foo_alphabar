@@ -1,0 +1,56 @@
+#pragma code_page(65001)
+
+#include <windows.h>
+#include "resource.h"
+#include "version.h"
+
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+
+IDD_PREFERENCES DIALOGEX 0, 0, 300, 106
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Size letters by their &number of tracks", IDC_PROPORTIONAL, "Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP, 7, 7, 286, 10
+    LTEXT           "Empty letters are hidden; every letter keeps a readable minimum height.",
+                    IDC_STATIC, 17, 19, 276, 8
+    LTEXT           "Letters with no matching album artist:", IDC_EMPTY_LABEL, 7, 35, 286, 8
+    CONTROL         "&Show them", IDC_EMPTY_SHOW, "Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP, 7, 49, 286, 10
+    CONTROL         "&Hide them", IDC_EMPTY_HIDE, "Button",
+                    BS_AUTORADIOBUTTON, 7, 76, 286, 10
+    LTEXT           "Dimmed and unclickable, so the strip always reads # A-Z.",
+                    IDC_EMPTY_SHOW_NOTE, 17, 61, 276, 8, WS_GROUP
+    LTEXT           "The letters that remain share the full height of the panel.",
+                    IDC_EMPTY_HIDE_NOTE, 17, 88, 276, 8
+END
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     ALPHABAR_VERSION_MAJOR, ALPHABAR_VERSION_MINOR, ALPHABAR_VERSION_PATCH, 0
+PRODUCTVERSION  ALPHABAR_VERSION_MAJOR, ALPHABAR_VERSION_MINOR, ALPHABAR_VERSION_PATCH, 0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_DLL
+FILESUBTYPE     VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName",      "Matthieu Bachelier"
+            VALUE "FileDescription",  "Alphabar: alphabet quick-jump panel for foobar2000 Columns UI"
+            VALUE "FileVersion",      ALPHABAR_VERSION_STRING
+            VALUE "InternalName",     "foo_alphabar"
+            VALUE "LegalCopyright",   "© 2026 Matthieu Bachelier. MIT License."
+            VALUE "OriginalFilename", "foo_alphabar.dll"
+            VALUE "ProductName",      "Alphabar"
+            VALUE "ProductVersion",   ALPHABAR_VERSION_STRING
+            VALUE "Comments",         "https://github.com/MBach/foo_alphabar"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END
